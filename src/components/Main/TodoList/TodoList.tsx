@@ -1,14 +1,22 @@
 import { useState } from "react"
-import { TextField } from "@material-ui/core"
+import { TextField, Checkbox } from "@material-ui/core"
 import { TodoListItemType } from "../../../types/types"
 import { TodoItem } from "./TodoItem/TodoItem"
 
 type TodoListPropsType = {
-    todos: Array <TodoListItemType>
+    todos: Array <TodoListItemType>,
     addTodo: (id: number, completed: false, title: any) => void,
     removeTask: (id: number) => void,
     setCompleted: (id: number) => void,
-}
+    setFilter: (filter: string) => void,
+}   
+interface Props extends React.Props<typeof Checkbox> {
+    label : string;
+    style: any;
+    defaultChecked?: boolean;
+    checkedIcon?: any;
+    uncheckedIcon?: any;
+};
 
 export const TodoList: React.FunctionComponent <TodoListPropsType> = (props) => {
 
@@ -22,6 +30,7 @@ export const TodoList: React.FunctionComponent <TodoListPropsType> = (props) => 
             setQuery ("")
         }
     }
+
 
     return (
         <div>
