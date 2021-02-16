@@ -6,6 +6,8 @@ import { TodoItem } from "./TodoItem/TodoItem"
 type TodoListPropsType = {
     todos: Array <TodoListItemType>
     addTodo: (id: number, completed: false, title: any) => void,
+    removeTask: (id: number) => void,
+    setCompleted: (id: number) => void,
 }
 
 export const TodoList: React.FunctionComponent <TodoListPropsType> = (props) => {
@@ -28,7 +30,7 @@ export const TodoList: React.FunctionComponent <TodoListPropsType> = (props) => 
             </div>
             {props.todos.map (t => {
                 return (
-                   <TodoItem title = {t.title} />
+                   <TodoItem key = {t.id} title = {t.title} completed = {t.completed} id = {t.id} removeTask = {props.removeTask} setCompleted = {props.setCompleted} />
                 )
             })}
         </div>

@@ -7,6 +7,8 @@ import { actions } from "../../../redux/main-reducer"
 type TodoListContainerPropsTypes = {
     todos: Array <TodoListItemType>
     addTodo: (id: number, completed: boolean, title: string) => void,
+    removeTask: (id: number) => void,
+    setCompleted: (id: number) => void,
 }
 
 const TodoListContainer: React.FunctionComponent <TodoListContainerPropsTypes> = (props) => {
@@ -21,4 +23,4 @@ let mapStateToProps = (state: AppStateType) => {
     }
 }
 
-export default connect (mapStateToProps, { addTodo: actions.addTodo })(TodoListContainer)
+export default connect (mapStateToProps, { addTodo: actions.addTodo, removeTask: actions.removeTask, setCompleted: actions.setCompleted })(TodoListContainer)
