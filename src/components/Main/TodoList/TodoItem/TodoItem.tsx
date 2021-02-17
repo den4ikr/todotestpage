@@ -26,7 +26,7 @@ export const TodoItem: React.FunctionComponent <TodoItemPropsType> = (props) => 
             <CardContent>
                 <div className = {styles.mainRow} >
                     <div className = {styles.row} >
-                        <Checkbox onChange = {setCompleted} color = "primary" />
+                        <Checkbox checked = {props.completed} onChange = {setCompleted} color = "primary" />
                         <Typography variant = "h5" >
                             {props.title} 
                         </Typography>

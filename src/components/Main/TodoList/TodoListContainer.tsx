@@ -6,11 +6,9 @@ import { actions } from "../../../redux/main-reducer"
 
 type TodoListContainerPropsTypes = {
     todos: Array <TodoListItemType>,
-    filter: string,
     addTodo: (id: number, completed: boolean, title: string) => void,
     removeTask: (id: number) => void,
     setCompleted: (id: number) => void,
-    setFilter: (filter: string) => void,
 }
 
 const TodoListContainer: React.FunctionComponent <TodoListContainerPropsTypes> = (props) => {
@@ -22,7 +20,6 @@ const TodoListContainer: React.FunctionComponent <TodoListContainerPropsTypes> =
 let mapStateToProps = (state: AppStateType) => {
     return {
         todos: state.main.todos,
-        filter: state.main.filter,
     }
 }
 
