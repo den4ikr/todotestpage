@@ -1,3 +1,9 @@
+How to set up and run my app.
+You should copy thr link and open gitbush in one of your folders. Write "git clone + link". Open project in your IDE and run command "npm install" or "yarn install" yo get "packedge.json" file. After all you can run "yarn start" or "npm start" and open app in http://localhost:3000/.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
