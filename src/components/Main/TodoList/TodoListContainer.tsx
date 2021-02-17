@@ -30,5 +30,4 @@ export default connect(mapStateToProps, {
   addTodo: actions.addTodo,
   removeTask: actions.removeTask,
   setCompleted: actions.setCompleted,
-  setFilter: actions.setFilter,
 })(TodoListContainer);
