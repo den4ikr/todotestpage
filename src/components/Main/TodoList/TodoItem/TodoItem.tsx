@@ -2,12 +2,13 @@ import { useState } from "react"
 import { Card, CardContent, Checkbox, Typography, IconButton } from "@material-ui/core"
 import useStyles from "./TodoItemStyle"
 import DeleteIcon from '@material-ui/icons/Delete'
+import { RemoveTodoType } from "../../../../types/types"
 
 type TodoItemPropsType = {
     title: string,
     id: number,
     completed: boolean,
-    removeTask: (id: number) => void,
+    removeTask: RemoveTodoType,
     setCompleted: (id: number) => void,
 }
 

@@ -8,10 +8,10 @@ const useStyles  = makeStyles ({
       selectEmpty: {
         marginTop: "10px",
     },
-    input: {
-        marginLeft: "10px",
-        marginRight: "10px",
-    },
+    emptyListTitle: {
+        textAlign: "center",
+        marginTop: "70px",
+    }
 })
 
 export default useStyles;
